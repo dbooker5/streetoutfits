@@ -1,36 +1,102 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Street Outfits
 
-## Getting Started
+Street Outfits is a modern, high-performance e-commerce application designed for streetwear enthusiasts. Built with the latest web technologies, it offers a seamless shopping experience with a focus on speed, design, and usability.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Modern Tech Stack**: Built on Next.js 16 and React 19 for cutting-edge performance and developer experience.
+- **Responsive Design**: Beautifully styled with Tailwind CSS v4, ensuring a great look on all devices.
+- **Robust Database**: Powered by Neon Serverless PostgreSQL and managed with Drizzle ORM for type-safe database interactions.
+- **Secure Authentication**: Integrated with Better Auth for secure and flexible user authentication.
+- **State Management**: Efficient global state management using Zustand.
+- **Product Management**: Browse and view products with a dedicated schema and database seeding.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Framework**: [Next.js 16](https://nextjs.org/)
+- **Library**: [React 19](https://react.dev/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Database**: [Neon PostgreSQL](https://neon.tech/)
+- **ORM**: [Drizzle ORM](https://orm.drizzle.team/)
+- **Authentication**: [Better Auth](https://www.better-auth.com/)
+- **State Management**: [Zustand](https://zustand-demo.pmnd.rs/)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🏁 Getting Started
 
-## Learn More
+Follow these steps to get the project running on your local machine.
 
-To learn more about Next.js, take a look at the following resources:
+### Prerequisites
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Node.js (v20 or higher recommended)
+- npm, yarn, pnpm, or bun
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Installation
 
-## Deploy on Vercel
+1.  **Clone the repository**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    ```bash
+    git clone https://github.com/yourusername/streetoutfits.git
+    cd streetoutfits
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2.  **Install dependencies**
+
+    ```bash
+    npm install
+    # or
+    yarn install
+    # or
+    pnpm install
+    ```
+
+3.  **Environment Setup**
+
+    Create a `.env.local` file in the root directory and add your environment variables. You can use `.env.example` as a reference if available.
+
+    ```env
+    DATABASE_URL=your_neon_database_url
+    # Add other necessary variables
+    ```
+
+4.  **Database Setup**
+
+    Generate the migrations and push them to your database:
+
+    ```bash
+    npm run db:generate
+    npm run db:migrate
+    ```
+
+    Seed the database with initial data:
+
+    ```bash
+    npm run db:seed
+    ```
+
+5.  **Run the Development Server**
+
+    ```bash
+    npm run dev
+    ```
+
+    Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## 🤝 Contributing
+
+We welcome contributions! Please see our [CONTRIBUTING.md](docs/CONTRIBUTING.md) for details on how to submit pull requests, report issues, and suggest improvements.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🆘 Support
+
+If you encounter any issues or have questions, please file an issue on the [GitHub Issues](https://github.com/yourusername/streetoutfits/issues) page.
+
+## 👥 Maintainers
+
+- **Street Outfits Team** - [Maintainer Profile](https://github.com/yourusername)
+
+---
+
+Built with ❤️ by the Street Outfits Team.
