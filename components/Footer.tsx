@@ -40,11 +40,11 @@ export function Footer() {
                     <div className="mb-8 lg:mb-0">
                         <Link href="/">
                             <Image
-                                src="/logo.svg"
-                                alt="Nike"
+                                src="/wlogo.svg"
+                                alt="StreetOutfits"
                                 width={60}
-                                height={24}
-                                className="h-auto w-[60px] invert"
+                                height={60}
+                                className="h-auto w-[60px]"
                             />
                         </Link>
                     </div>
@@ -94,14 +94,14 @@ export function Footer() {
                                 <path fillRule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd" />
                             </svg>
                         </span>
-                        <span className="font-medium text-white">Croatia</span>
-                        <span>© 2025 Nike, Inc. All Rights Reserved</span>
+                        <span className="font-medium text-white">Kenya</span>
+                        <span>© 2025 StreetOutfits, Inc. All Rights Reserved</span>
                     </div>
                     <div className="flex flex-wrap gap-6">
                         <Link href="#" className="hover:text-white">Guides</Link>
                         <Link href="#" className="hover:text-white">Terms of Sale</Link>
                         <Link href="#" className="hover:text-white">Terms of Use</Link>
-                        <Link href="#" className="hover:text-white">Nike Privacy Policy</Link>
+                        <Link href="#" className="hover:text-white">StreetOutfits Privacy Policy</Link>
                     </div>
                 </div>
             </div>
