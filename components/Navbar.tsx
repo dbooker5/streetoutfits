@@ -6,7 +6,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 export function Navbar() {
-    const count = useCartStore((state) => state.getcount());
+    const getcount = useCartStore((state) => state.getcount);
+    const [count, setCount] = useState(0);
     const [mounted, setMounted] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -22,10 +23,10 @@ export function Navbar() {
                 <Link href="/" className="flex-shrink-0">
                     <Image
                         src="/logo.svg"
-                        alt="Nike"
-                        width={60}
-                        height={24}
-                        className="h-auto w-[60px]"
+                        alt="StreetOutfits"
+                        width={40}
+                        height={40}
+                        className="h-auto w-[40px]"
                     />
                 </Link>
 
