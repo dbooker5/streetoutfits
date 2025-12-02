@@ -2,7 +2,7 @@ import { db } from "./index";
 import { products } from "./schema";
 import dotenv from "dotenv";
 
-dotenv.config({ path: ".env.local" }); // Ensure env is loaded if running directly
+dotenv.config({ path: ".env" }); // Ensure env is loaded if running directly
 
 async function main() {
     const items = [
