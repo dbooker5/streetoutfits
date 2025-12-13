@@ -58,12 +58,15 @@ async function mergeGuestCartWithUserCart() {
 
 export async function getCurrentUser() {
   try {
+    const headersList = await headers();
+
     const session = await auth.api.getSession({
-      headers: await headers(),
+      headers: Object.fromEntries(headersList.entries()),
     });
 
     return session?.user ?? null;
   } catch (error) {
+    console.error('getCurrentUser error:', error);
     return null;
   }
 }
@@ -78,18 +81,20 @@ export async function signUp(formData: z.infer<typeof signUpSchema>) {
   const { name, email, password } = validatedFields.data;
 
   try {
+    const headersList = await headers();
     await auth.api.signUpEmail({
       body: {
         email,
         password,
         name,
       },
-      headers: await headers(),
+      headers: Object.fromEntries(headersList.entries()),
     });
     
     await mergeGuestCartWithUserCart();
     
-  } catch {
+  } catch (error) {
+    console.error('SignUp error:', error);
     return { error: 'Failed to create account' };
   }
   
@@ -106,17 +111,19 @@ export async function signIn(formData: z.infer<typeof signInSchema>) {
   const { email, password } = validatedFields.data;
 
   try {
+    const headersList = await headers();
     await auth.api.signInEmail({
       body: {
         email,
         password,
       },
-      headers: await headers(),
+      headers: Object.fromEntries(headersList.entries()),
     });
 
     await mergeGuestCartWithUserCart();
 
-  } catch {
+  } catch (error) {
+    console.error('SignIn error:', error);
     return { error: 'Failed to sign in' };
   }
 
@@ -124,8 +131,9 @@ export async function signIn(formData: z.infer<typeof signInSchema>) {
 }
 
 export async function signOut() {
+  const headersList = await headers();
   await auth.api.signOut({
-    headers: await headers(),
+    headers: Object.fromEntries(headersList.entries()),
   });
   redirect('/sign-in');
 }
